@@ -1,0 +1,16 @@
+package com.rule
+
+import com.model.Product
+
+rule "Offer for Shoes"
+	when 
+		productObject: Product(type=="shoes")
+	then
+		productObject.setDiscount(15);
+	end
+rule "Offer for Jewelry"
+	when 
+		productObject: Product(type=="jewelry")
+	then
+		productObject.setDiscount(50);
+	end
